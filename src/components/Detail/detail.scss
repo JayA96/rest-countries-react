@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+
+.detail {
+
+    &__back {
+        margin: 8rem 0;
+        padding: 1rem 3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font: inherit;
+        color: inherit;
+        border: none;
+        box-shadow: 0rem 0rem 0.4rem 0.2rem var(--shadow-color);
+        background-color: var(--element-color);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--bg-color);
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 3rem 0 4rem 0;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, 0.4fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "flag name name"
+        "flag info-left info-right"
+        "flag borders borders";
+        row-gap: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas:
+            "flag"
+            "name"
+            "info-left"
+            "info-right"
+            "borders";
+        }
+    }
+
+    &__flag {
+        grid-area: flag;
+        padding-right: 10rem;
+        
+        @media only screen and (max-width: $bp-medium) {
+            padding-right: 0;
+        }
+
+        &>img {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        grid-area: name;
+        align-self: end;
+        margin: 1rem 0;
+    }
+
+    &__info-left {
+        grid-area: info-left;
+        list-style: none;
+        align-self: start;
+        margin-bottom: 2rem;
+    }
+
+    &__info-right {
+        grid-area: info-right;
+        list-style: none;
+        align-self: start;
+        margin-bottom: 2rem;
+    }
+
+    &__borders {
+        grid-area: borders;
+        align-self: start;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            align-items: start;
+            gap: 2rem;
+        }
+
+        &--heading {
+            white-space: nowrap;
+        }
+
+        &--list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        &--item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            min-width: 8rem;
+            box-shadow: 0rem 0rem 0.4rem 0.2rem var(--shadow-color);
+            background-color: var(--element-color);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--bg-color);
+            }
+        }
+    }
+}

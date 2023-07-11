@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--element-color);
+    box-shadow: 0 0.2rem 0.5rem 0 var(--shadow-color);
+}
+
+.dark-mode-btn {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    &__mui {
+        color: var(--text-color);
+    }
+}

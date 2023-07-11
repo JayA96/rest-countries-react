@@ -1,0 +1,21 @@
+.country {
+    background-color: var(--element-color);
+    overflow: hidden;
+    box-shadow: 0rem 0rem 2rem 0rem var(--shadow-color);
+    cursor: pointer;
+    
+    &__flag {
+        width: 100%;
+        text-align: center;
+        
+        &>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        padding: 2rem;
+    }
+}

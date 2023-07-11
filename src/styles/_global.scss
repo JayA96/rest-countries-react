@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: $default-font-family;
+  line-height: 1;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --text-color: #{$color-very-dark-blue-text};
+  --input-color: #{$color-dark-gray};
+  --bg-color: #{$color-very-light-gray};
+  --element-color: #{$color-white};
+  --shadow-color: #{rgba($color-dark-gray, 0.2)};
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 57.5%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 52.5%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark {
+  --text-color: #{$color-white};
+  --input-color: #{$color-very-light-gray};
+  --bg-color: #{$color-very-dark-blue-bg};
+  --element-color: #{$color-dark-blue};
+  --shadow-color: #{rgba($color-very-dark-blue-text, 0.2)};
+  color-scheme: dark;
+}
+
+.homepage {
+  font-size: $homepage-font-size;
+}
+
+.detail {
+  font-size: $homepage-font-size;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

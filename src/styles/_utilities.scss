@@ -1,0 +1,44 @@
+.pad-sides {
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+.pad-tb-lg {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.pad-tb-md {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.pad-tb-sm {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.mb-lg {
+    margin-bottom: 4rem;
+}
+
+.mb-md {
+    margin-bottom: 2rem;
+}
+
+.mb-sm {
+    margin-bottom: 1rem;
+}
+
+.brd-rad {
+    border-radius: 0.5rem;
+}
+
+.brd-rad-sm {
+    border-radius: 0.2rem;
+}
