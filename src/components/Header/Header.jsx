@@ -6,7 +6,6 @@ import './header.scss';
 export default function Header(props) {
 
   const darkMode = props.dark;
-  console.log(darkMode);
 
   return (
     <header className='header pad-sides pad-tb-sm mb-lg'>
